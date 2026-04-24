@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-image: linear-gradient(pink, lightyellow , beige);
+        }
+
+        header>div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        header ol {
+            display: flex;
+            width: 600px;            justify-content: space-evenly;
+            align-items: center;
+            list-style-type: none;
+        }
+
+        header img {
+            height: 60px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        header h2{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+            margin-left: 50px;
+        }
+
+        li>a {
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        main{
+            background-image: radial-gradient(gray, lavender);
+        }
+
+        main h1{
+            margin: 30px;
+            color: aliceblue;
+            text-align: center;
+            text-shadow: 5px 5px 5px rgb(229, 255, 0);
+            font-style: italic;
+            padding: 20px;
+        }
+
+        main h1::first-letter {
+            font-size: 50px;
+        }
+
+        main section {
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        main section>div {
+            border-radius: 20px;
+            padding: 20px;
+            background-image: linear-gradient(purple, pink);
+        }
+
+        section img {
+            border-radius: 50%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="https://img.freepik.com/premium-vector/wonderland-logo-wonderland-lettering-logo_11481-1247.jpg" alt="" height="150" width="150">
+            <h2>XYZ</h2>
+        </div>
+        <nav>
+            <ol>
+                <li><a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+</svg>  Home</a></li>
+                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+  <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+</svg>  Login</a></li>
+                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button-fill" viewBox="0 0 16 16">
+  <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h8A1.5 1.5 0 0 0 11 3.5v-2A1.5 1.5 0 0 0 9.5 0zm5.927 2.427A.25.25 0 0 1 7.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+</svg></a> Register</a></li>
+                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+</svg>  Contact</a></li>
+            </ol>
+
+        </nav>
+
+    </header>
+    <main>
+        <h1> Welcome to my Page </h1>
+        <section>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa_HPRPCGuatahf3M040A-t_w9IZcGyhc83w&s" alt="" height="200" width="200">
+                <p>
+                    <h4>Name: Vanellope</h4>
+                    <h4>Movie: Wreck-It Ralpha</h4>
+                    <h4><Rating:emoji>Ratting: ⭐⭐⭐⭐</Rating:emoji></h4>
+                    <span>
+                        <button>Read More</button>
+                        <button>Watch Trailer</button>
+                    </span>
+                </p>
+            </div>
+            <div>
+                <img src="https://i.ytimg.com/vi/ytzZGObzobI/maxresdefault.jpg" alt="" height="200" width="200">
+                <p>
+                    <h4>Name: pinaku picho</h4>
+                    <h4>Movie: Pinacchio</h4>
+                    <h4><Rating:emoji>Ratting: ⭐⭐⭐</Rating:emoji></h4>
+                    <span>
+                        <button>Read More</button>
+                        <button>Watch Trailer</button>
+                    </span>
+                </p>
+            </div>
+            <div>
+                <img src="https://m.media-amazon.com/images/S/pv-target-images/a0f45f8c53f83b7d3bf784191f241b416b92e4a70c6c699303b975e8281e0159.jpg" alt="" height="200" width="200">
+                <p>
+                    <h4>Name: Maleficient</h4>
+                    <h4>Movie: Maleficient</h4>
+                    <h4><Rating:emoji>Ratting: ⭐⭐⭐⭐</Rating:emoji></h4>
+                    <span>
+                        <button>Read More</button>
+                        <button>Watch Trailer</button>
+                    </span>
+                </p>
+            </div>
+            <div>
+                <img src="https://m.media-amazon.com/images/M/MV5BYjgxMTQ3NjMtOTI1Yy00Yzg4LWJlNWQtMjFkNjVlYjU0OWIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="" height="200" width="200">
+                <p>
+                    <h4>Name: Alice</h4>
+                    <h4>Movie: Alice in the Wonderland</h4>
+                    <h4><Rating:emoji>Ratting: ⭐⭐⭐⭐</Rating:emoji></h4>
+                    <span>
+                        <button>Read More</button>
+                        <button>Watch Trailer</button>
+                    </span>
+                </p>
+            </div>
+            <div>
+                <img src="https://www.posterized.in/cdn/shop/files/NEW3.jpg?v=1736617528&width=1946" alt="" height="200" width="200">
+                <p>
+                    <h4>Name: Nick & Juddy </h4>
+                    <h4>Movie: Zootopia</h4>
+                    <h4><Rating:emoji>Ratting: ⭐⭐⭐⭐</Rating:emoji></h4>
+                    <span>
+                        <button>Read More</button>
+                        <button>Watch Trailer</button>
+                    </span>
+                </p>
+            </div>
+
+
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+    </footer>
+</body>
+</html>

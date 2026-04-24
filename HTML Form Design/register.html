@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registartion Form</title>
+    <style>
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 50px;
+            width: 400px;
+            margin: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="#" method="POST">
+        <fieldset align="center">
+            <legend><b>Registration Form</b></legend>
+            <label for="name"><b>Full Name:</b></label>
+            
+            <input type="text" id="name" name="name" placeholder="Enter you Name"><br><br>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email"><br><br>
+
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" name="password" placeholder="Enter your Password" required><br><br>
+
+            <label for="confirm_password"><b>Confirm Password:</b></label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your Password" required><br><br>
+
+            <label for="Gender"><b>Gender:</b></label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label><br><br>
+
+            <label for="hobbies"><b>Hobbies:</b></label>
+            <input type="checkbox" id="hobby1" name="hobbies" value="coding" placeholder="Coding">
+            <label for="hobby1">Coding</label>      
+            <input type="checkbox" id="hobby2" name="hobbies" value="music" placeholder="Music">
+            <label for="hobby2">Music</label>
+            <input type="checkbox" id="hobby3" name="hobbies" value="sports" placeholder="Sports">
+            <label for="hobby3">Sports</label><br><br>
+
+            <label for="dob"><b>Date of Birth:</b></label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <input type="submit" value="Register">
+        </fieldset>
+    </form>
+</body>
+</html>

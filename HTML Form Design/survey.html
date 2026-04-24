@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        *{
+            margin: 10px;
+            padding: 2px;
+        }
+
+        header {
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            background-image: linear-gradient(red, lightyellow , beige);
+        }
+
+        header>div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        header ol {
+            display: flex;
+            width: 600px;            justify-content: space-evenly;
+            align-items: center;
+            list-style-type: none;
+        }
+
+        header img {
+            height: 60px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        header h2{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-left: 50px;
+        }
+
+        li>a {
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        main{
+            background-image: radial-gradient(gray, lavender);
+        }
+
+        main h1{
+            margin: 30px;
+            color: aliceblue;
+            text-align: center;
+            text-shadow: 5px 5px 5px rgb(229, 255, 0);
+            font-style: italic;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="POST">
+        <fieldset align="center">
+            <legend><b>Survey Form</b></legend>
+            <label for="name"><b>User Name:</b></label>
+            
+            <input type="text" id="name" name="name" placeholder="Enter you Name"><br><br>
+
+            <label for="email"><b>Feedback:</b></label>
+            <textarea id="desc" name="issueDescription" required></textarea><br><br>
+<!--rating 5 stars-->
+            <label for="password"><b>Rating:</b></label>
+            <form action="/submit-rating" method="POST">
+                <div class="rating">
+                     <!-- Star 5 -->
+                      <input type="radio" id="star5" name="rating" value="5" />
+    <label for="star5" title="5 stars">★</label>
+    
+    <!-- Star 4 -->
+    <input type="radio" id="star4" name="rating" value="4" />
+    <label for="star4" title="4 stars">★</label>
+    
+    <!-- Star 3 -->
+    <input type="radio" id="star3" name="rating" value="3" />
+    <label for="star3" title="3 stars">★</label>
+    
+    <!-- Star 2 -->
+    <input type="radio" id="star2" name="rating" value="2" />
+    <label for="star2" title="2 stars">★</label>
+    
+    <!-- Star 1 -->
+    <input type="radio" id="star1" name="rating" value="1" />
+    <label for="star1" title="1 star">★</label>
+  </div> <br><br>
+   
+    
+         
+  <!-- Dropdown Menu -->
+  <label for="tech"><b>Favorite Technology:</b></label>
+  <select id="tech" name="tech">
+    <option value="ai">Artificial Intelligence</option>
+    <option value="cloud">Cloud Computing</option>
+    <option value="cyber">Cybersecurity</option>
+    <option value="iot">Internet of Things</option>
+  </select>
+
+  <br><br>
+
+  <!-- Checkbox -->
+  <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+  <label for="subscribe">Subscribe to newsletter</label>
+
+  <br><br>
+  <button type="submit">Submit Survey</button>
+
+</form>
+            
+        </fieldset>
+    </form>
+</body>
+</html>

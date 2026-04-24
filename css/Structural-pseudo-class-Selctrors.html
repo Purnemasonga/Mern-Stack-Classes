@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            background-color: lightgray;
+        }
+
+        li:first-child{
+            background-color: lightblue;
+            color: darkblue;
+        }
+        <!-- first of type = means it ignores the first element of its type -->
+        button:first-of-type{
+            background-color: lightcoral;
+            color:white;
+        }
+
+        li:last-child{
+            background-color: lightgreen;
+            color: darkgreen;
+        }
+
+        button:last-child{
+            background-color: red;
+            color: yellow
+        }
+
+        li:nth-child(even){
+            background-color: lightpink;
+            color: darkred;
+        }
+
+        a:visited{
+            color:blueviolet
+        }
+        
+        a:active{
+            color: lightcoral;
+        }
+
+        input:focus{
+            background-color: lightyellow;
+            color: darkslategray;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: ;
+        }
+
+        div:hover{
+            font-style: italic;
+            text-decoration: wavy underline;
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+
+    <input type="text" placeholder="Enter your name">
+    <ol>
+        <span> span </span>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li> 
+    </ol>
+    <div>
+        <span> span</span>
+        <button>First button</button>
+        <button>Second button</button>
+        <button>Third button</button>
+        <button>Fourth button</button>
+        <button>Fifth button</button>
+        <button>Sixth button</button>
+        <!-- last of type = last of its type -->
+        <button>Seventh button</button>
+    </div>
+</body>
+</html>

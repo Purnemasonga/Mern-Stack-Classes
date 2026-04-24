@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" style="background-color: bisque;height: 200vh;display: flex; justify-content: center;align-items: center;" method="post" background-image: url('https://www.w3schools.com/html/pic_trulli.jpg'); background-size: cover; background-position: center; padding: 20px; border-radius: 10px;">
+    <form action="" style="background-color: bisque;height: 200vh;display: flex; justify-content: center;align-items: center;" method="post" background-image: url('https://www.w3schools.com/html/pic_trulli.jpg'); background-size: cover; background-position: center; padding: 20px; border-radius: 10px;">
+
+        <fieldset style="background-color: red; width: 50vw;">
+            <h1>
+                <center><u>Job Application Form </u></center>
+            </h1>
+
+            <label for="First name">Full Name:</label><br>
+            <input type="text" id="First name" name="First name" placeholder="Enter First Name" required><br><br>
+
+            <label for="Last name">Last Name:</label><br>
+            <input type="text" id="Last name" name="Last name" placeholder="Enter Last Name" required><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter Email Address" required><br><br>
+
+            <label for="DOB">Date of Birth:</label><br>
+            <input type="date" id="DOB" name="DOB" required><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" placeholder="Enter Age" min="0"><br><br>
+
+            <label for="gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male </label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female </label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other </label><br>
+            </select><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" pattern="[6-9]{1}[0-9]{9}" id="phone" name="phone" placeholder="+91 "><br><br>
+
+            <label for="State">State:</label><br>
+            <select id="State" name="State" placeholder="Enter State" required>
+                <option value="">Select State</option>
+                <option value="California">California</option>
+                <option value="Texas">Texas</option>
+                <option value="Florida">Florida</option>
+            </select><br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" placeholder="Enter Address" rows="4" cols="50"
+                required></textarea><br><br>
+
+            <label for="skills">Skills:</label><br>
+            <input type="checkbox" id="skills" name="skills" value="Node.js"> Node.js<br>
+            <input type="checkbox" id="skills" name="skills" value="JavaScript"> JavaScript<br>
+            <input type="checkbox" id="skills" name="skills" value="MongoDB"> MongoDB<br><br>
+            </select>
+
+            <label for="Languages">Languages Known:</label><br>
+            <select id="Languages" name="Languages" required>
+                <option value="">Select Languages</option>
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="Telugu">Telugu</option>
+            </select><br><br>
+
+            <label for="resume">Upload Resume:</label><br>
+            <input type="file" id="resume" name="resume" placeholder="Upload Resume" accept=".pdf, .doc"><br><br>
+
+            <button>{
+                padding: 10px 30px;
+                background-color: blue;
+                fontweight: bold;
+                fontstyle: italic;
+                fontfamily: Arial, sans-serif;
+                border-radius:8px;
+                color: white;
+            }  
+            </button>
+
+            <input type="submit" value="Submit Application" align="center">
+
+
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        fieldset{
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">Google Form</h1> 
+    </header>
+   <div>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSc8n9l3mXo2s5a7v6j8k9l0m1n2o3p4q5r6s7t8u9v0w1x2y3z4/formResponse" method="POST">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="entry.1234567890" placeholder="Enter your name"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="entry.0987654321" placeholder="Enter your email"><br><br>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="entry.1122334455" placeholder="Enter your age "><br><br>
+                    <input type="submit" value="Submit">
+
+        </fieldset>
+        <br>
+    </form>
+   </div>
+</body>
+</html>
