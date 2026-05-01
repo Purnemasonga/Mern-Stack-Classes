@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>You had Unlocked the Home Page!!</h1>
+    <div style="border: 1px solid #ccc; display: inline-block; padding: 20px;">
+        <h3>Your Profile Info:</h3>
+        <p><strong>Username:</strong> <span id="displayUser"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    </div>
+
+    <br><br>
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        // Retrieve and display the data on the home page
+        document.getElementById("displayUser").innerText = localStorage.getItem("Username");
+        document.getElementById("displayEmail").innerText = localStorage.getItem("Email");
+
+        function logout() {
+            alert("Logging out...");
+            window.open("login-form.html")
+        }
+    </script>
+</body>
+</html>

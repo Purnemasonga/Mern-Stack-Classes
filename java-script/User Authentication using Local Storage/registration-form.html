@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisration Form</title>
+</head>
+<body>
+    <form id="regForm" action="">
+        <fieldset>
+            <h1>Regisration Form</h1>
+            <label for="">Username: </label>
+            <input type="text" id="username" placeholder="username"><br><br>
+            <label for=""> Pssword:</label>
+            <input type ="text" id="password" placeholder="password"> <br><br>
+            <label for="">Email: </label>
+            <input type="text" id="email" placeholder="email"><br><br>
+            <label for="">Address: </label>
+            <input type ="text" id="address" placeholder="address"> <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Cancle</button>
+
+        </fieldset>
+    </form>
+    <script>
+        let uname = document.getElementById("username")
+        let psw = document.getElementById("password")
+        let email = document.getElementById("email")
+        let add = document.getElementById("address")
+
+        let regForm = document.getElementById("regForm")
+
+        regForm.addEventListener("submit", (e)=>{
+            e.preventDefault()
+            console.log("Username: " ,uname.value);
+            console.log("Password: ",psw.value);
+            console.log("email: " ,email.value);
+
+            window.localStorage.setItem("Username", uname.value)
+            window.localStorage.setItem("Password", psw.value)
+            window.localStorage.setItem("Email", email.value)
+            window.localStorage.setItem("Address", add.value)
+
+            alert("Registration was completed!! WHT NXT");
+            let storedName=localStorage.getItem("Username")
+            let storedPassword=localStorage.getItem("Password")
+            console.log("stored username", storedName);
+            console.log("stored password", storedPassword);
+
+            window.open("login-form.html")
+        })
+
+    </script>
+
+
+     
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <form id="loginform" action="">
+        <fieldset>
+            <h1>Login Page</h1>
+            <label for =""> Username: </label>
+            <input type="text" id="username" placeholder="username"> <br><br>
+            <label for =""> Password: </label>
+            <input type="text" id="password" placeholder="password"> <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Cancle</button>
+
+        </fieldset>
+
+    </form>
+    <script>
+        let loginForm = document.getElementById("loginform");
+        let uname = document.getElementById("username") //
+        let psw = document.getElementById("password")
+
+        loginForm.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            let storedName = localStorage.getItem("Username");
+            let storedPass = localStorage.getItem("Password");
+
+            if (uname.value === storedName && psw.value === storedPass) {
+                alert("Login Successful! Welcome.");
+                window.open("home-form.html")
+                
+            } else {
+                alert("Check you User-details!");
+            }
+        })
+    </script>
+</body>
+</html>
