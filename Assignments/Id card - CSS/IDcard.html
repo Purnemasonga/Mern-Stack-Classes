@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Design</title>
+    <style>
+        /* Main card container */
+        .main-container {
+            position: relative; /* Necessary to anchor the vertical text */
+            padding: 20px;
+            width: 350px; /* Fixed width for ID card shape */
+            margin: 50px auto; /* Centered on page */
+            border: 10px solid grey;
+            border-radius: 20px;
+            background-color: antiquewhite;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        /* Top Logo alignment */
+        .sub-container-1 {
+            text-align: center;
+        }
+
+        .sub-container-1 img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Middle Section: Accreditation and Student Photo */
+        .sub-container-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .sub-container-2 span {
+            font-size: 10px; /* Smaller text to match the density of the photo */
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        #student-image {
+            height: 150px;
+            width: 140px;
+            margin-top: 10px;
+            border: 1px solid #000;
+        }
+
+        /* Vertical Side Text */
+        h3 {
+            position: absolute;
+            writing-mode: vertical-rl; /* Native way to rotate text vertically */
+            transform: rotate(180deg); /* Flip to read bottom-to-top */
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            margin: 0;
+            font-size: 14px;
+            color: grey;
+        }
+
+        /* Bottom Details Table */
+        .sub-container-3 {
+            margin-top: 20px;
+            margin-left: 30px; /* Space for the vertical text */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 4px;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        span, p, td {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Vertical Text on the Left -->
+        <h3>COLLEGE CODE : BABA</h3>
+
+        <div class="sub-container-1">
+            <img src="https://resources.saylor.org/wwwresources/wp-content/uploads/20200717101134/BITS-VIzag-logo.jpg" alt="college-logo">
+        </div>
+
+        <div class="sub-container-2">
+            <span>Approved by AICTE, New Delhi & Affiliated to JNTUGV</span>
+            <span>"Accredited by NAAC with 'A' Grade"</span>
+            <span>An ISO 9001:2015 Certified Institute</span>
+            <img id="student-image" src="https://static.vecteezy.com/system/resources/thumbnails/056/702/582/small/hand-drawing-cartoon-pink-umbrella-character-cute-umbrella-for-sticker-icon-vector.jpg" alt="student-img">
+        </div>
+
+        <div class="sub-container-3">
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td>SONGA PURNEMA</td>   
+                </tr>
+                <tr>
+                    <td>Regd. No :</td>
+                    <td>23NR1A05G1</td>
+                </tr>
+                <tr>
+                    <td>Course :</td>
+                     <td>B.Tech</td>
+                </tr>
+                <tr>
+                    <td>Branch :</td>
+                    <td>CSE</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
