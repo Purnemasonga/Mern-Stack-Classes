@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 2;
+        }
+
+        /* flex will be worked for the parent node */
+        /* display flex will be in the row format in default case */
+        ol {
+            background-color: bisque;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+
+        }
+
+        li {
+            flex-grow: 1;
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px 2px yellow;
+            color: maroon;
+            background-color: paleturquoise;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 30px;
+            text-align: center;
+        }
+
+        video {
+            width: 100vw;
+            height: 500px;
+        }
+
+        #electronic-devices {
+            padding-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            bottom: 150px;
+            backdrop-filter: blur(10px);
+            background-image: linear-gradient(white, rgb(22, 22, 22));
+
+        }
+
+        #electronic-devices-section{
+            position: relative;
+            bottom: 80px;
+            left: 40px;
+            z-index: 1;
+            font-size: 40px;
+            font-style: italic;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+
+        #electronic-devices-section:hover{
+            text-decoration: underline;
+            text-shadow: 2px 2px 2px red;
+            color: burlywood;
+            cursor: pointer;
+            transform: scaleY(1.5);
+
+        }
+        #electronic-devices>div {
+            height: 450px;
+            width: 350px;
+            border-top: 5px solid blue;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 20px;
+            padding: 10px 20px;
+            background-color: peachpuff;
+            animation-name: moving;
+            animation-duration: 4s;
+        }
+
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 500px;
+            backdrop-filter: blur(10px);
+            text-shadow: 4px 4px 4px aliceblue;
+            padding: 10px 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px black;
+            animation-name: scaling;
+            animation-duration: 3s;
+        }
+
+
+        #product-card img{
+            height: 250px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        #product-card img:hover {
+            transform: skew(10deg);
+            box-shadow: 2px 2px 8px darkgray;
+        }
+
+        .product-info h4 {
+            font-size: 20px;
+            color: darkred;
+            margin-left: 25px;
+        }
+
+        .product-info p {
+            color: black;
+            margin-left: 25px;
+        }
+
+        .btn-container>button {
+            padding: 10px 20px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 8px;
+            border: none;
+            margin: 0px 20px;
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        .btn-container>button:first-child {
+            background-color: lightgreen;
+        }
+
+        .btn-container>button:last-child {
+            background-color: rgb(235, 82, 11);
+        }
+
+        aside{
+            position: fixed;
+            top: 30%;
+            border: 2px solid black;
+            padding: 20px 10px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            z-index: 1;
+            margin-left: 10px;
+            height: 250px;
+            border-radius: 50px;
+        }
+
+        aside img:hover{
+            cursor: pointer;
+            box-shadow: 2px 2px 5px black;
+            transform: translate(10px);
+        }
+
+        aside img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+
+        @keyframes scaling{
+            0%{
+                transform: scale(0);
+            }
+            
+            100%{
+                transform: scale(1);
+            }
+        }
+        @keyframes moving{
+           from{
+            transform: translateY(200px);
+            }
+            to{
+                arnsgorm: transalteY(0px);
+            }
+        }
+
+        body{
+            animation-name: bgColorChange;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-delay: 5s;
+        }
+
+        @keyframes bgColorChange{
+            0%{
+                background-color: aliceblue;
+            }
+            10%{
+                background-color: plum;
+            }
+            20%{
+                background-color: antiquewhite;
+            }
+            30%{
+                background-color: paleturquoise;
+            }
+            40%{
+                background-color: rgb(233, 150, 212);
+            }
+            50%{
+                background-color: rgb(174, 162, 238);
+            }
+            60%{
+                background-color: rgb(152, 248, 219);
+            }
+            70%{
+                background-color: rgb(52, 235, 195);
+            }
+            80%{
+                background-color: rgb(153, 241, 142);
+            }
+            90%{
+                background-color: rgb(228, 231, 14);
+            }
+            100%{
+                background-color: rgb(221, 136, 38);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ol>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+            <li>HELP</li>
+            <li>LOGIN</li>
+        </ol>
+    </nav>
+    <main>
+        <section id="background-video">
+            <video src="./bg video.mp4" loop autoplay></video>
+        </section>
+        <section>
+            <h1>Welcome to Think Mart</h1>
+        </section>
+        <h2 id="electronic-devices-section">Electronic Devices :</h2>
+        <section id="electronic-devices">
+            <div id="product-card">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRmcnlqNjRzYXY4eHE1aXdhbXlhZzNyZjd5MXhxZjYwY2JhM243ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/C1wVrAoqpZ1GDzj6bb/giphy.gif" aly="">
+                <div class="product-info">
+                    <h4>Name: Pendrive</h4>
+                    <h4>Cost: ₹ 2000</h4>
+                    <h4>Ratings: 4.3/5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minus, ipsum qui
+                        modi magnam corrupti, mollitia fugit, illo repellat amet facere at perferendis beatae dolores
+                        vel ex provident sint?</p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://i.pinimg.com/236x/57/f8/1e/57f81e7f06b43e2fdc3543f887b1a487.jpg" aly="">
+                <div class="product-info">
+                    <h4>Name: Pendrive</h4>
+                    <h4>Cost: ₹ 2000</h4>
+                    <h4>Ratings: 4.3/5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minus, ipsum qui
+                        modi magnam corrupti, mollitia fugit, illo repellat amet facere at perferendis beatae dolores
+                        vel ex provident sint?</p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://cdn.create.vista.com/api/media/small/474976598/stock-photo-couple-coloured-pen-drive-dark-background" aly="">
+                <div class="product-info">
+                    <h4>Name: Pendrive</h4>
+                    <h4>Cost: ₹ 2000</h4>
+                    <h4>Ratings: 4.3/5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minus, ipsum qui
+                        modi magnam corrupti, mollitia fugit, illo repellat amet facere at perferendis beatae dolores
+                        vel ex provident sint?</p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxzU_zJvDniw61SCVm3GlJl7DlZ-XXLoH3rg&s" aly="">
+                <div class="product-info">
+                    <h4>Name: Pendrive</h4>
+                    <h4>Cost: ₹ 2000</h4>
+                    <h4>Ratings: 4.3/5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minus, ipsum qui
+                        modi magnam corrupti, mollitia fugit, illo repellat amet facere at perferendis beatae dolores
+                        vel ex provident sint?</p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://i.ytimg.com/vi/n5TQkxvU8dU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgYShWMA8=&rs=AOn4CLAKEjCRbaiw44U74rzzPTKXvYMF2g" aly="">
+                <div class="product-info">
+                    <h4>Name: Pendrive</h4>
+                    <h4>Cost: ₹ 2000</h4>
+                    <h4>Ratings: 4.3/5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minus, ipsum qui
+                        modi magnam corrupti, mollitia fugit, illo repellat amet facere at perferendis beatae dolores
+                        vel ex provident sint?</p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://www.geekalerts.com/u/McDonalds-French-Fries-USB-Flash-Drive.jpg" aly="">
+                <div class="product-info">
+                    <h4>Name: Pendrive</h4>
+                    <h4>Cost: ₹ 2000</h4>
+                    <h4>Ratings: 4.3/5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minus, ipsum qui
+                        modi magnam corrupti, mollitia fugit, illo repellat amet facere at perferendis beatae dolores
+                        vel ex provident sint?</p>
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <aside>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUd3CYawFR6qqXXZPxB-mY79LXPf4tXI_JA&s" alt="You tube image">
+
+                <img src="https://img.freepik.com/premium-vector/linkedin-logo-icon_1273375-1174.jpg?semt=ais_hybrid&w=740&q=80" alt="Linkdin Image">
+
+                <img src="https://img.freepik.com/premium-vector/instagram-logo_976174-11.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram Image">
+
+                <img src="https://img.freepik.com/premium-vector/whatsapp-vector-logo-icon-logotype-vector-social-media_901408-406.jpg?semt=ais_hybrid&w=740&q=80" alt="Whats App Image">
+            </aside>
+        </section>
+    </main>
+</body>
+
+</html>
