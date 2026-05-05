@@ -1,0 +1,16 @@
+[
+    {
+        "name": "JavaFull Stack",
+        "duration": "6 months",
+        "fees": "65000",
+        "topics": ["core java", "jdbc", "hibernates", "servalats", "Speing MVC", "Speing Boot", "Spring Microservices"
+    ], "poster": ""
+    },{
+        "name": "Mern",
+        "duration": "5 months",
+        "fees": "62000",
+        "topics": ["HTML", "CSS", "JS", "React Js", "Node and Express JS", "MongoDB", "Api intergration and testing"],
+        "poster":""
+    }
+    
+]

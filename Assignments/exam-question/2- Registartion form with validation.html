@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    
+</head>
+<body>
+    <form id="registerForm" method="post">
+         <fieldset>
+           <legend align="center"><h2>User Registration Form</h2></legend>
+             <label for="username">Username:</label>
+             <input type="text" id="username" required placeholder="Enter your name" minlength="3" maxlength="10">
+             <br><br>
+             <label for="email">Email:</label>
+             <input type="email" id="email" required placeholder="Enter your email">
+             <br><br>
+             <label for="pwd">Password:</label>
+             <input type="password" id="pwd" required name="Password" placeholder="Enter Password" minlength="5" maxlength="7">
+             <br><br>
+             <label for="confirm">Confirm Password: </label>
+             <input type="password" id="confirm" required placeholder="Re-enter your password">
+             <br><br>
+             <button type="submit">Register</button>
+            </fieldset>
+        </form>
+    <script>
+       document.getElementById("registerForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let username = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("pwd").value.trim();
+    let confirm = document.getElementById("confirm").value.trim();
+   
+
+    if (
+        username === "" ||
+        email === "" ||
+        password === "" ||
+        confirm === "" 
+    ) {
+        alert("All fields are required");
+        return;
+    }
+    if (password !== confirm) {
+        alert("Passwords do not match");
+        return;
+    }
+    localStorage.setItem("username", username);
+    localStorage.setItem("pwd", password);
+
+    alert("Registration Successful");
+    window.location.href = "question-3.html";
+});
+    </script>
+</body>
+</html>

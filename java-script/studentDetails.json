@@ -1,0 +1,20 @@
+[
+    {
+        "name": "robert",
+        "roll.no": 25,
+        "active": true
+    },{
+        "name": "robert",
+        "roll.no": 25,
+        "active": true
+    },{
+        "name": "robert",
+        "roll.no": 25,
+        "active": true,
+        "skills": ["html", "css"],
+        "address": {
+            "city": "pink-city",
+            "pincode": 3484024 
+        }
+    }
+]

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userDetails  = function (userName,password) {
+            
+        // console.log(userName);
+        // console.log(password);
+        console.log("This is the Day!!");
+        return userName+" "+password
+        return "prada" //this will not be printed as the return will be leaving out after its execution.
+        }
+
+        let results =userDetails('sofia', "marinda@123");
+        console.log(userDetails('purni@123', "cheif@123" ));
+        console.log(results);
+
+
+        //normal function
+        function employeeDetails(name, role, salary, address){
+            // console.log("May 1st is declared Holiday");
+            // console.log("Name: ", name);
+            // console.log("Role: ", role);
+            // console.log("Salary: ", salary);
+            // console.log("Address: ", address);
+
+            return [name, role, salary, address] //by using the return value must be storing in the variable and then printing it//
+        }
+
+        let emp1=employeeDetails("Andrew", "Influencer", 700000, "texus")
+        console.log(emp1);
+
+
+        //immediate function
+        (function(){
+            let apikey= "bvkwblvbsnvowobvkz"
+            console.log("Is this Immediate ?");
+            return apikey; //here the return is not possible -- can print the statment only once.
+        })()  // by calling this () the o/p could be printed directly as we are calling anonumus function.
+
+
+
+        //Arrow function : Represented as ()=> 
+        let arrowFun=()=>console.log("ARROW FUN");
+        arrowFun()
+        arrowFun();
+
+        let reminder=(names, theme)=>{
+            let p = 100
+            let q = 300
+            console.log(p,q);
+            console.log("Name: ", names, "Theme:", theme);
+        }
+        reminder(["dragon", "dinosaraus", "ant", "dolphin"], "Jungle Book")
+
+
+        //Nested Function
+        // function outerFun(){
+        //     function innerFun(){
+        //         console.log("Inner fun");
+        //     }
+        //     console.log("Outer Fun");
+        //     innerFun() // inner function -- it should be called inside the block only, 
+        //     // can not be accessed or displays the o/p outside the block//
+        // }
+        // outerFun() // Outer fun-- can be called outside//
+
+        // function outerFun(a,b){
+        //     console.log("Outer Fun");
+        //     return function innerFun() {
+        //         console.log(a,b);
+        //         console.log("Inner function");
+
+        //     }
+
+        // }
+        // //outerFun()//
+        // // console.log( outerFun()); 
+        // let result1=outerFun(10,20)
+        // result1()
+
+        function outerFun(a,b){
+            console.log("Outer Fun");
+            return function innerFun() {
+                console.log(a,b);
+                console.log("Inner function");
+
+            }
+
+        }
+        //outerFun()//
+        // console.log( outerFun()); 
+        let result1=outerFun(10,20)
+        result1()
+
+
+        //HEIGHER ORDER FUNCTION
+
+        function homePage(){ //heighe order function
+            console.log("Home Page Entry")
+
+
+        }
+        function loginPage(){
+            console.log("Login Page Entry")
+
+        }
+        function registerPage(){
+            console.log("Register Page Entry")
+
+        }
+        //here 1st register page will be executed followed by login 
+        // since these 2 parameters were passsed 1st...followed by home page//
+        homePage(registerPage(), loginPage()) // paasing 2 functions as parameters : regiserPage & loginPage//
+
+
+        function display(fun1, fun2){
+            fun1();
+            fun2(); // the fun 1,2 were called directly. 
+            // console.log(fun1);
+            // console.log(fun2);
+        }
+        display(()=>{
+            console.log("First call back function")
+        }, ()=>{
+            console.log("Second call back function")
+        })
+
+        //GENERATOR FUNCTION
+        // function generator(){} -- normal function with * = GENERATOR FUNCTION
+        function* generator(){
+            yield 10;
+            yield 50;
+            yield 80;
+            console.log("This is called as the Generator function");
+        }
+        // nextGen.next(); -- o/p - 1
+        // generator().next() -- o/p -2
+
+        let nextGen = generator();
+        // console.log(nextGen.next()); = {value: 80, done: false}
+        console.log(nextGen.next());
+        console.log(nextGen.next());
+        console.log(nextGen.next());
+        console.log(nextGen.next());
+        console.log(nextGen.next());
+
+
+
+    </script>
+</body>
+</html>

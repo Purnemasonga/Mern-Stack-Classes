@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1=[10,20,30,40];
+        let arr2=[
+            50,
+            null, 
+            {name: "sofia", role: "designer"},()=>{
+            console.log("heyaa");
+            console.log("HAPPY BIRTHDAY");
+        }]
+
+        //SPREAD OPERATORS -- doen in arrrays only.
+
+        let arr3=[...arr1, ...arr2, "html", "css", true];
+        console.log(arr3);
+
+        //array de-structuring : splliting teh entire array into variables
+        let [a,b,c,d]=arr1;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+        let [p,e,f]=arr2;
+        console.log(p);
+        console.log(e);
+        console.log(f);
+
+        let [q,r,s,t]=arr2;
+        console.log(q);
+        console.log(r);
+        console.log(s);
+        t();// Since it is an arrow function just by calling the o/p can be printed.
+
+
+        //SPREAD OPERATORS IN OBJECT
+
+        let per={
+            name: "Thimotee",
+            phone: 8925748234
+        }
+        let orderDetails={
+            productName: "mobile",
+            price:60000,
+            status:"Done"
+        }
+
+        let orderHistory ={...per,["phone"]: 6834959848};
+        console.log(orderHistory);
+
+        //OBJECT DE-STRUCTURING
+
+        let courseDetails={
+            name: 'MERN',
+            duration: "30days",
+            totalHrs: "180hs"  
+        }
+
+        let {name, duration, totalHrs}=courseDetails;
+        console.log(name);
+        console.log(duration);
+
+        
+
+
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

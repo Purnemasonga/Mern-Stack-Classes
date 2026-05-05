@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jsonData = [
+    {
+        "name": "robert",
+        "roll.no": 25,
+        "active": true
+    },{
+        "name": "robert",
+        "roll.no": 25,
+        "active": true
+    },{
+        "name": "robert",
+        "roll.no": 25,
+        "active": true,
+        "skills": ["html", "css"],
+        "address": {
+            "city": "pink-city",
+            "pincode": 3484024 
+        }
+    }
+]
+
+let collegeDetails={
+    name: "BITS",
+    location: "Vizag",
+    courses: ["B.tech", "M.tech", "BCA", "MCA", "Ph.d"]
+}
+
+console.log(collegeDetails);
+console.log(JSON.stringify(collegeDetails));
+
+document.write(JSON.stringify(collegeDetails));
+localStorage.setItem("college", JSON.stringify(collegeDetails)) //localStorage = Should be in key and value pair
+
+
+let JsonData = `{
+"name": "elizebeth",
+"rollNo": 500,
+"active": true 
+}`
+console.log(JSON.parse(JsonData));
+
+    </script>
+</body>
+</html>

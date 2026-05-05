@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // map = will be generating new arrays with the updated values --> for-each and for loops will not be doing 
+        let productPrice =[500,2600,850,950,5500,6000];
+
+        //mapping 10% discount ot the product prices
+        let mappedPrices = productPrice.map((price)=>{
+            // return price+200;
+            return price-price/10; //Applying discount
+        });
+
+        //filter dicounted products  1000 to 5000
+        console.log(mappedPrices);
+
+        filteredProducts=mappedPrices.filter((price)=>{
+            return price>=1000 && price <=5000;
+        })
+        console.log(filteredProducts);
+
+        //totall sum of mappedprices
+        let totalPrice = mappedPrices.reduce((price, acc)=>{
+            return price+acc;
+        })
+        console.log(totalPrice);
+
+    </script>
+</body>
+</html>

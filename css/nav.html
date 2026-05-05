@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-image: linear-gradient(transparent, rgb(197, 15, 46));
+        }
+
+        ol{
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        li{
+            background-color: rgb(5, 238, 129);
+            color: rgb(241, 234, 239);
+            padding: 10px 20px;
+        }
+        /*small devices designing */
+        @media screen and (max-widt: 450px) {
+            ol{
+                flex-direction: column;
+            }
+            li{
+                margin: 10px;
+                text-align: center;
+            }
+        }
+
+        @media screen {
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Home</li>
+        <li>About</li>
+        <li>Profile</li>
+        <li>Contact</li>
+        <li>Login</li>
+    </ol>
+</body>
+</html>

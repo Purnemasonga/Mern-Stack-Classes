@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::after{
+            content: " Hahaha";
+            color: blueviolet;
+        }
+        label::after{
+            content: "*";
+            color: magenta;
+        }
+/* for highlighting on the h1 then we can use the id= and then style it seperately */
+        #heading::before{
+            content: "😒";
+        }
+
+        label:last-of-type:before{
+            content: "📧";
+        }
+
+        label:first-of-type:before{
+            content:"👩🏻";
+        }
+
+        h2::first-letter{
+            color: brown;
+            font-size: 30px;
+            font-style: italic;
+            text-shadow: 3px 3px 3px greenyellow;
+        }
+
+        p::first-line{
+            font-style: italic;
+            font-weight: bold;
+            color:darkblue;
+            background-color: bisque;
+        }
+
+        li:first-child::marker{
+            content: "🙌";
+        }
+
+        li:nth-child(2)::marker{
+            content: "!!  ";
+        }
+
+         li:nth-child(3)::marker,  li:nth-child(4)::marker{
+            color: brown;
+            font-style: italic;
+         }
+
+         div::selection{
+            color: green;
+            background-color: yellow;
+         }
+
+         p::selection{
+            color: pink;
+            background-color: grey;
+         }
+
+
+         input::placeholder{
+            color: goldenrod;
+            font-style: oblique;
+            font-weight: bolder;
+         }
+
+    </style>
+</head>
+<body>
+    <h1 id="heading">Welcome to Day-6</h1>
+    <!--Entire page is considered as the form -->
+    <form>
+        <fieldset>
+            <!--fielset: for the box we can use the fielset -->
+            <h2>Register Form</h2>
+            <label for=""> First Name</label>
+            <input type="text" placeholder="Enter first Name"> <br> <br>
+            <label  for="">Email </label>
+            <input type="text" placeholder="Enter you're email">
+
+           
+            
+        </fieldset>
+    </form>
+
+    <ol>
+        <li>list-items-1</li>
+        <li>list-items-2</li>
+        <li>list-items-3</li>
+        <li>list-items-4</li>
+    </ol>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat temporibus praesentium modi blanditiis perferendis. Aut a aliquid rerum dicta perspiciatis fugiat id nisi fugit doloribus alias praesentium, recusandae accusamus repellendus.
+    Officiis, enim ipsum. Quia, eligendi voluptates saepe exercitationem cupiditate, perferendis reiciendis, quisquam porro tenetur excepturi quod illo assumenda qui dolor dicta ab praesentium eum temporibus illum? Molestiae iure quod consequatur.
+    Quod, quae veritatis eveniet tenetur esse cumque laborum eius! Assumenda consequuntur architecto repudiandae, facilis temporibus earum dicta aut saepe sapiente tempore iste animi blanditiis nam iure aliquid porro odit ab!</p>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque sapiente explicabo, corporis optio similique eius. Temporibus libero impedit eligendi, eaque quis fugiat, odio amet eum ab nemo assumenda. Deleniti, illo!
+        Fugiat omnis iusto amet sit facilis eos quae architecto harum ullam quaerat consequatur, libero deserunt nesciunt aut, facere sunt asperiores possimus qui quam? Cumque illo repudiandae ea tempore eius doloribus.
+    </div>
+</body>
+</html>

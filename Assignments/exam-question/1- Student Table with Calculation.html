@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Results Table</title>
+</head>
+<style>
+    studentDetails{
+        align="centre",
+    }
+</style>
+<body id="b1">
+    <h2 align="centre">Student Results Table</h2>
+
+    <script>
+        // 1. Target the body 
+        let b1 = document.getElementById("b1");
+
+        // 2. Data Structure (Array of Objects as shown in image_1f189b.jpg)
+        let studentDetails = [
+            { name: "Purnema", rollNo: "HU2001", marks: { CNN: 85, CPP: 75, DSA: 90, ADE: 80 } },
+            { name: "Sahi", rollNo: "HU2002", marks: { CNN: 70, CPP: 65, DSA: 85, ADE: 75 } },
+            { name: "Sadhvi", rollNo: "HU2003", marks: { CNN: 60, CPP: 60, DSA: 60, ADE: 60 } },
+        ];
+
+        // 3. Create the Table element.....1
+        let t1 = document.createElement("table");
+        
+        // 4. Create Header Row.....2
+        let trH = document.createElement("tr");
+        let headers = ["Name","CNN", "CPP", "DSA","Total Marks", "Percentage"];
+        
+        headers.forEach(hText => {
+            let th = document.createElement("th");
+            th.innerText = hText;
+            trH.appendChild(th);
+        });
+        t1.appendChild(trH);
+
+        // 5. Generate Data Rows using the Array
+        studentDetails.forEach(std => {
+            let tr = document.createElement("tr");
+
+            // Calculate values
+            let total = std.marks.CNN + std.marks.CPP + std.marks.DSA;
+            let percentage = (total / 300) * 100;
+
+            // Map data to cells (matches the order in headers)
+            let values = [
+                std.name,
+                std.marks.CNN,
+                std.marks.CPP,
+                std.marks.DSA,
+                total,
+                percentage.toFixed(2) + "%", // Rounds to 2 decimal places
+            ];
+
+            values.forEach(val => {
+                let td = document.createElement("td"); //Creating columns for the table.....3
+                td.innerText = val;
+                tr.appendChild(td);
+            });
+
+            t1.appendChild(tr);
+        });
+
+        // 6. Table Styling (Raw format as requested)
+        t1.border = 1;
+        t1.cellSpacing = 0;
+        t1.cellPadding = 10;
+        t1.style.width = "100%";
+
+        // 7. Append Table to Body
+        b1.appendChild(t1);
+
+    </script>
+</body>
+</html>

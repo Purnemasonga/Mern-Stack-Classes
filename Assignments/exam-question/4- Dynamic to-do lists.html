@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>  
+</head>
+<body>
+    <h1> To-Do List</h1>
+
+    <div class="input-container">
+        <!-- Input field and Add button -->
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Container for dynamic tasks -->
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const taskText = input.value.trim();
+
+            // Validation to prevent empty tasks
+            if (taskText === "") return alert("Please enter a task!");
+
+            // 1. Create the <li> element
+            const li = document.createElement('li');
+
+            // 2. Set content with a Delete button beside the text
+            li.innerHTML = `
+                <span>${taskText}</span>
+                <button class="delete-btn" onclick="removeTask(this)">Delete</button>
+            `;
+
+            // 3. Append to the list
+            document.getElementById('taskList').appendChild(li);
+
+            // 4. Clear input field
+            input.value = "";
+        }
+
+        // Function to remove the specific task
+        function removeTask(button) {
+            const li = button.parentElement;
+            li.remove();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array - literal way//
+        let arr=[16,18,21,30,50,35]
+        let arr1=['dancing', 32, 'monkey', 54, 'cracked', 'head']
+        
+        //to store the data in the table format//
+        console.log(arr);
+        console.table(arr1);
+
+        
+
+        //new keyword//
+        let arr2=new Array(10,20,30,40)
+        console.table(arr2);
+        console.log(arr[6]);
+
+        //inbuillt methods/ inbuilt functions
+        let sampleArr=[100,200,300]
+        sampleArr.push(400) //can push multiple values but insterted at the end//
+        console.log(sampleArr);
+        sampleArr.pop() //pop's only 1 element as the end of the array//
+        console.log(sampleArr);
+
+        sampleArr.unshift(0,10) //to add an elements at the beginning of the array
+        console.log(sampleArr);
+
+        sampleArr.shift() // to remove the elements at the beginning of the array --- by repeating this those many elements can be removed//
+        console.log(sampleArr);
+
+        sampleArr.push(250,280,299)
+        console.log(sampleArr);
+        console.log(sampleArr.splice(1,4)); //spliceit will be selecting the elements and then removes them and then add's new elemnts if required//
+        console.log(sampleArr);
+
+        console.log(sampleArr.toString());
+
+
+        //input: Javascript is a scripting language"
+        //o/p-1: Language scripting is Javascript"
+        //op-3: "revese of op-1"
+
+
+    </script>
+</body>
+</html>

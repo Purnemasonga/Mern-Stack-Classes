@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        let str="Pinkpanther";
+        console.log(str.length);
+// the replace compand is just confined to particular line itself.... after that by stating str the orginal character will eb diaplced//
+// It was Case-sensitive//
+        console.log(str.replaceAll("P", "Q"));
+        console.log(str);
+//if the paramenters were passed then each character will be seperated...if not it will be arranged like array//
+        console.log(str.split(""));
+        console.log(str.split("p"));
+
+
+        console.log(str.toUpperCase());
+        console.log(str.toLocaleUpperCase());
+        console.log(str.toLowerCase());
+        console.log(str.trimStart());
+        // to fetch the characters based on the index value//
+        console.log(str.charAt(4));
+        //includes -- were required to find a charcater is present or not---- used to check the frontend part with the datatbase//
+        console.log(str.includes("panther"));
+        //indexof= character, CharAt= index number//
+        console.log(str.indexOf("a"));
+        console.log(str.lastIndexOf("p"));
+        console.log(str.concat(" is in Pink color"));
+        //slice-- based on the i/p it will be cutiing the start and end of the word//
+        console.log(str.slice(4,7));
+
+        //can directly change into lower case by add (.) //
+        console.log("QUACK QUACK" .toLowerCase());
+        // inclues, upper case, lowercase, length ---- IMP//
+
+        
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

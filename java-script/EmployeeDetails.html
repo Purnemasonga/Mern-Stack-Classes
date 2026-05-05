@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    tbody tr:nth-child(odd){
+        background-color: aquamarine;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
+        margin-bottom: 40px;
+    }
+
+
+</style>
+<body>
+    <h1>Emp Deatils</h1>
+    <input type="search" placeholder="Search Employee">
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr bgcolor="pink">
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tr>
+            <td>Sofia</td>
+            <td>Fashion</td>
+            <td>80</td>
+            <td>Texus</td>
+            <td>783465921</td>
+        </tr>
+        <tr>
+            <td>Andrew</td>
+            <td>Carpenter</td>
+            <td>40</td>
+            <td>Spain</td>
+            <td>7326832586</td>
+        </tr>
+        <tr>
+            <td>Bixbi</td>
+            <td>Assistant</td>
+            <td>90</td>
+            <td>National places</td>
+            <td>2509858432</td>
+        </tr>
+        <tr>
+            <td>Alexa</td>
+            <td>Assistant</td>
+            <td>100</td>
+            <td>National places</td>
+            <td>4378428432</td>
+        </tr>
+    </table>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, rerum omnis voluptas incidunt, cum, labore praesentium beatae dolore nulla eligendi voluptates sint? Autem optio magni asperiores quasi ab possimus blanditiis.</p>
+    <button onclick="disapperParagraph()">Click here</button>
+
+    <script>
+
+        function disapperParagraph(){
+            let para = document.querySelector("p");
+            para.style.display="none"
+        }
+        let rows=document.querySelectorAll("tbody tr")
+        let input=document.querySelector("input");
+
+
+        console.log(rows);
+        //onkeyup -- until and unless the cursor is out of the pressing the cosnole will be printed
+        input.addEventListener('keyup',()=>{
+            let inputText=input.value.toLowerCase()
+            rows.forEach((row)=>{
+                let rowData=row.textContent;
+
+                let result = rowData.toLowerCase().includes(inputText);
+                console.log(result);
+
+                row.style.display= result ? "" : "none"
+            })
+        })
+
+        //input.openkeyup=()=>{}
+        
+    </script>
+    
+</body>
+</html>
+
+
