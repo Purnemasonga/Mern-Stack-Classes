@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Design</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0; /* Prevents unwanted scrolling */
+        }
+        .container {
+            background-color: rgb(233, 229, 229);
+            border: 2px solid black;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        input {
+            width: 100%; /* Makes input responsive to container width */
+            box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
+            padding: 15px;
+            border: 1px solid black;
+            font-size: 20px;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        #button-container {
+            display: grid;
+            /* 4 equal columns */
+            grid-template-columns: repeat(4, 1fr); 
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        #button-container div {
+            border: 2px solid darkolivegreen;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: white; /* Base color to keep it clean */
+        }
+
+        /* Merging Cells: The "AC" button spans 2 columns */
+        .span-two {
+            grid-column: span 2;
+        }
+
+        /* Original highlight for the first child */
+        #button-container div:nth-child(1) {
+            background-color: bisque;
+        }
+
+        /* Highlight for operators or special keys if desired */
+        .operator {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <input type="number" readonly placeholder="0">
+        </div>
+        <div id="button-container">
+            <!-- Row 1: Scientific/Clear -->
+            <div>sin</div>
+            <div>cos</div>
+            <div>tan</div>
+            <div class="operator">AC</div>
+
+            <!-- Row 2: Numbers & Multiply -->
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div class="operator">*</div>
+
+            <!-- Row 3: Numbers & Minus -->
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div class="operator">-</div>
+
+            <!-- Row 4: Numbers & Plus -->
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="operator">+</div>
+
+            <!-- Row 5: Large 0, Equals, Divide -->
+            <div class="span-two">0</div> <!-- Combined 2 cells for 0 -->
+            <div class="operator">=</div>
+            <div class="operator">/</div>
+        </div>
+    </div>
+</body>
+</html>
