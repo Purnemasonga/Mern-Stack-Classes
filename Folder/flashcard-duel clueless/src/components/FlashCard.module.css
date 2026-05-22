@@ -1,0 +1,143 @@
+/* src/components/FlashCard.module.css */
+.arenaCard {
+  background: #ffffff;
+  border: var(--neo-border);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+/* Question Section Top Block */
+.questionSection {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-bottom: var(--neo-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.cardTypeBadge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background-color: var(--accent-purple);
+  border: 2px solid var(--ink-black);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.questionText {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* Interaction Controls Base */
+.answerSection {
+  padding: 2rem;
+  background-color: var(--bg-main);
+}
+
+/* Layout System: Text Input Match Form */
+.typingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.brutalInput {
+  width: 100%;
+  padding: 1.25rem;
+  border: var(--neo-border);
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  outline: none;
+  box-shadow: var(--neo-shadow-sm);
+}
+
+.brutalInput:focus {
+  background-color: #ffffff;
+  border-color: var(--accent-blue);
+}
+
+.submitBtn {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.1rem;
+  background-color: var(--accent-yellow);
+  border: var(--neo-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  cursor: pointer;
+  box-shadow: var(--neo-shadow-sm);
+  transition: var(--transition-snap);
+}
+
+.submitBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Layout System: Multi Choice Grid */
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.optionBtn {
+  font-family: inherit;
+  background: #ffffff;
+  border: var(--neo-border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: var(--neo-shadow-sm);
+  transition: var(--transition-snap);
+}
+
+/* Dynamically color button variants like your references */
+.optionBtn:nth-child(1) { --accent-tint: var(--accent-blue); }
+.optionBtn:nth-child(2) { --accent-tint: var(--accent-yellow); }
+.optionBtn:nth-child(3) { --accent-tint: var(--accent-purple); }
+.optionBtn:nth-child(4) { --accent-tint: var(--accent-green); }
+
+.optionIndex {
+  font-weight: 800;
+  font-size: 1rem;
+  background-color: var(--accent-tint);
+  border: 2px solid var(--ink-black);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.optionValue {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink-black);
+}
+
+.optionBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--ink-black);
+}
+
+.optionBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}

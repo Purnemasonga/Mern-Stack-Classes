@@ -1,6 +1,7 @@
 //add Users
 const Users = require("../model/UserModel");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 //{}=req.body; = object destructuring -- individual variables to be stored
 
 const register = async (req, res) => {
@@ -31,7 +32,7 @@ const register = async (req, res) => {
       state: state,
       zipCode: zipCode,
     };
-    await Users.insertOne(newUser);
+    await Users.create(newUser);
     res.status(200).json({ message: "Register Successfully" });
   } catch (error) {
     res.status(500).json({ message: "failed to register", err: error });
@@ -43,6 +44,7 @@ const getUsers = async (req, res) => {
   try {
     // .find({}) fetches all documents from the collection
     // Note: If you are using Mongoose, use .find({}). If using raw MongoDB driver, use .find({}).toArray()
+
     const allUsers = await Users.find();
 
     res.status(200).json({
@@ -60,12 +62,30 @@ const login = async (req, res) => {
     const { username, password } = req.body;
     const foundUser = await Users.findOne({ email: username });
 
+    //generate jwt new token
+    const token = await jwt.sign(
+      {
+        id: foundUser._id,
+        role: foundUser.userType,
+        email: username,
+        password: password,
+      },
+      process.env.SECRETE_KEY,
+      { notBefore: "10s", expiresIn: "60M" },
+    );
+    // console.log("generated Token :", token);
     const hashedPassword = await bcrypt.compare(password, foundUser.password);
-
     if (!hashedPassword) {
       res.status(401).json({ message: "invalid password" });
     }
-    res.status(202).json({ message: "login successfull" });
+    res
+      .status(202)
+      .json({
+        message: "login successfull",
+        token,
+        id: foundUser._id,
+        email: foundUser.email,
+      });
   } catch (error) {
     res.status(500).json({ message: "username not found" });
   }
@@ -105,7 +125,7 @@ const updateProfile = async (req, res) => {
 const forgetPassword = async (req, res) => {
   const hashedPassword = await bcrypt.hash(req.body.password, 10);
   try {
-   await Users.findOneAndUpdate(
+    await Users.findOneAndUpdate(
       { email: req.body.email },
       { password: hashedPassword },
       { new: true },

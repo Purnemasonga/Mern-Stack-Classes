@@ -1,0 +1,125 @@
+/* src/components/ChatBox.module.css */
+.chatTerminal {
+  background: #ffffff;
+  border: var(--neo-border);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-shadow);
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.terminalHeader {
+  background-color: var(--ink-black);
+  color: #ffffff;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.terminalDot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-yellow);
+  border-radius: 50%;
+}
+
+.terminalTitle {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Feed Viewport Window */
+.messagesContainer {
+  flex: 1;
+  padding: 1.25rem;
+  overflow-y: auto;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bubbleWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.chatBubble {
+  max-width: 85%;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid var(--ink-black);
+  border-radius: 12px;
+  box-shadow: 2px 2px 0px var(--ink-black);
+}
+
+.userBubble {
+  background-color: #ffffff;
+}
+
+/* Core styling matching the notification banners in your reference screens */
+.systemWrapper {
+  justify-content: center;
+}
+
+.systemBubble {
+  background-color: var(--accent-purple);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.authorTag {
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.bodyText {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Input Form Row Block */
+.terminalFooter {
+  display: flex;
+  border-top: var(--neo-border);
+  background-color: #ffffff;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.messageInput {
+  flex: 1;
+  border: 2px solid var(--ink-black);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  outline: none;
+}
+
+.sendIconBtn {
+  background-color: var(--accent-yellow);
+  border: 2px solid var(--ink-black);
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 2px 2px 0px var(--ink-black);
+  transition: var(--transition-snap);
+}
+
+.sendIconBtn:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}

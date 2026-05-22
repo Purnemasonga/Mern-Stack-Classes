@@ -1,0 +1,175 @@
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+  /* Neo-Brutalist Color Palette Tokens */
+  --bg-main: #FDFBF7;        /* Crisp cream background */
+  --ink-black: #1A1A1A;      /* Outer border line color */
+  --accent-yellow: #F4D068;   /* Primary call-to-action color */
+  --accent-blue: #59C3E3;     /* Alternate button/badge color */
+  --accent-green: #52B788;    /* Online indicators / Correct answers */
+  --accent-purple: #B5A7DF;   /* Subjects background decoration */
+  
+  /* Core Geometry Systems */
+  --neo-border: 3px solid var(--ink-black);
+  --neo-radius: 16px;
+  --neo-shadow: 5px 5px 0px var(--ink-black);
+  --neo-shadow-sm: 3px 3px 0px var(--ink-black);
+  --transition-snap: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--ink-black);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .heading-font {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+/* Base Utility Classes for Layout Quick-Fixes */
+.neo-card {
+  background: #ffffff;
+  border: var(--neo-border);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-shadow);
+}
+
+.neo-btn {
+  font-family: inherit;
+  font-weight: 800;
+  padding: 0.75rem 1.5rem;
+  border: var(--neo-border);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: var(--neo-shadow-sm);
+  transition: var(--transition-snap);
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* src/styles/global.css additions */
+
+/* Anchors the relative positioning stack framework elements */
+.navbar {
+  position: relative;
+}
+
+/* Appends the pixelated dino pseudo asset mask framework layout */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; 
+  left: -60px; 
+  
+  width: 44px;
+  height: 44px;
+  background-color: #1A1A1A;
+  
+  /* Pulls directly from the open-source chrome baseline runner project sheet asset */
+  -webkit-mask-image: url('https://raw.githubusercontent.com/wayou/t-rex-runner/master/assets/default_200_percent/offline-sprite-2x.png');
+  mask-image: url('https://raw.githubusercontent.com/wayou/t-rex-runner/master/assets/default_200_percent/offline-sprite-2x.png');
+  
+  /* Maps coordinate coordinates parameters window straight onto the standing dino layout position index */
+  -webkit-mask-position: -75.5px -2px;
+  mask-position: -75.5px -2px;
+  
+  /* Forces sharp pixel render scaling overrides bypassing antialiasing blurs */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  
+  animation: dinoCrawlAcrossBorderLoop 18s linear infinite;
+  z-index: 99;
+}
+
+@keyframes dinoCrawlAcrossBorderLoop {
+  0% {
+    left: -60px;
+    transform: scaleX(1); /* Facing Forward */
+  }
+  49% {
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100% + 60px);
+    transform: scaleX(-1); /* Flips face direction to return backwards */
+  }
+  99% {
+    transform: scaleX(-1);
+  }
+  100% {
+    left: -60px;
+    transform: scaleX(1);
+  }
+}
+
+/* Add to the bottom of your global stylesheet */
+
+/* Create a rock-solid track container that sits right beneath your header layout */
+.dino-border-track {
+  position: relative;
+  width: 100%;
+  height: 4px; /* Thick, heavy black line matching your layout style */
+  background-color: #1A1A1A;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  overflow: visible; /* Crucial: Allows the dino to stand up above the track */
+}
+
+/* Mount the T-Rex directly to the track line */
+.dino-border-track::after {
+  content: '';
+  position: absolute;
+  bottom: 0px; 
+  left: -60px; 
+  width: 44px;
+  height: 44px;
+  background-color: #1A1A1A;
+  
+  /* Pulls directly from the open-source chrome baseline runner asset sheet */
+  -webkit-mask-image: url('https://raw.githubusercontent.com/wayou/t-rex-runner/master/assets/default_200_percent/offline-sprite-2x.png');
+  mask-image: url('https://raw.githubusercontent.com/wayou/t-rex-runner/master/assets/default_200_percent/offline-sprite-2x.png');
+  -webkit-mask-position: -75.5px -2px;
+  mask-position: -75.5px -2px;
+  
+  /* Sharp pixel art scaling overrides */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  
+  animation: dinoCrawlAcrossBorderLoop 18s linear infinite;
+}
+
+@keyframes dinoCrawlAcrossBorderLoop {
+  0% {
+    left: -60px;
+    transform: scaleX(1); /* Facing forward right */
+  }
+  49% {
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100% + 60px);
+    transform: scaleX(-1); /* Flips face direction to crawl back left */
+  }
+  99% {
+    transform: scaleX(-1);
+  }
+  100% {
+    left: -60px;
+    transform: scaleX(1);
+  }
+}

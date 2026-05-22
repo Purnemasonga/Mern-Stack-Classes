@@ -1,0 +1,107 @@
+//importing express package with the express variable name
+const express = require("express")
+//calling an variable which acts as a package, and then storing it in an variable app
+const app = express(); 
+const PORT = 4000 // saying the port to run in 4000 port
+// console.log(app);
+//listen is a paramarized function -- (callback, error)
+
+let studentDetails=[]
+
+let collegeDetails=[]
+
+//here middleware is used to send data in json format
+app.use(express.json())
+
+//post method - add only 1 student
+app.post("/add-student", (req, res)=>{
+    const newStudent = {
+        stdName: req.body.name,
+        stdRollNo: req.body.rollNo,
+        stdBranch: req.body.branch,
+        stdSkills: req.body.skills,
+    };
+    studentDetails.push(newStudent);
+    res.status(200).json({message: "student added successfully", newStudent});
+});
+
+app.post("/add-multiplestudents", (req,res)=>{
+    const allNewStudents = req.body.allStudents;
+    studentDetails.push(allNewStudents);
+    res.status(200).json({message:"all new students were added"})
+    }
+)
+
+
+
+app.post("/add-college", (req, res)=>{
+    const newColl = {
+        collId: req.body.id,
+        collName: req.body.name,
+        collLocation: req.body.location,
+        collRank: req.body.rank,
+    };
+    collegeDetails.push(newColl);
+    res.status(200).json({message: "college added successfully", newColl});
+});
+
+app.post("/add-multipleColleges", (req,res)=>{
+    const allNewColleges = req.body.allNewColleges;
+    studentDetails.push(allNewColleges);
+    res.status(200).json({message:"all new colleges were added"})
+    }
+)
+
+app.get("/get-colleges", (req,res)=>{
+    res.status(200).json({colleges:collegeDetails})
+})
+
+
+
+
+
+
+//delete students - by delete method
+app.delete("/delete-student/:rollNumber",(req,res)=>{
+    const paramsRollNumber = req.params.id;
+    const afterDelete = studentDetails.filter((student)=>student.stdRollNo!=paramsRollNumber)
+    studentDetails=afterDelete;
+
+    res.status(200).json({message:"student record delete successfully"})
+});
+
+
+
+
+
+
+//get method - used to get all the student details
+app.get("/get-students", (req,res)=>{
+    res.status(200).json({students:studentDetails})
+})
+
+
+app.delete("/delete-student/",(req,res)=>{
+
+
+})
+
+
+//get is paramarixed () and heigher order function.
+
+// app.get("/", (req, res)=>{
+//     res.status(200).send("server is running by calling get method")
+
+// })
+
+
+
+// /=based on the router path it will be executed -- json: 
+
+// app.get("/get-users",(req, res)=>{
+//     res.status(200).json({name: "purni", role: "designer", emial: "purni@gmail.com", phone:"9182156352"});
+// } );
+
+app.listen(PORT,()=>{
+    console.log("Server running on port", PORT);
+})

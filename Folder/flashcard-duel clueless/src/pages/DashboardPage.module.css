@@ -1,0 +1,321 @@
+/* src/pages/DashboardPage.module.css */
+
+.dashboardContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Profile Banner Main Box */
+.profileHeroCard {
+  background: #ffffff;
+  border: 3px solid #1A1A1A;
+  border-radius: 16px;
+  box-shadow: 6px 6px 0px #1A1A1A;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.identityGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.statusPill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background-color: #59C3E3;
+  color: #1A1A1A;
+  padding: 0.3rem 0.6rem;
+  border: 2px solid #1A1A1A;
+  border-radius: 6px;
+}
+
+.usernameDisplay {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.cursorBlink {
+  color: #1A1A1A;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.heroSubtext {
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Sidebar Stats Info Strip */
+.statsBoxSlat {
+  border: 3px solid #1A1A1A;
+  border-radius: 12px;
+  background-color: #FDFBF7;
+  padding: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 220px;
+}
+
+.statLine {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+/* Matchmaking Code Input Bar */
+.matchmakingBar {
+  background-color: #1A1A1A;
+  border-radius: 14px;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.barLabel {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+
+.roomBarInput {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  border: 3px solid #1A1A1A;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.joinActionBtn {
+  font-family: inherit;
+  font-weight: 800;
+  background-color: #ffffff;
+  border: 3px solid #1A1A1A;
+  border-radius: 10px;
+  padding: 0.85rem 1.75rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #A0A0A0;
+  transition: all 0.1s ease;
+}
+
+.joinActionBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Navigation System Tabs */
+.tabBarGroup {
+  display: flex;
+  gap: 0.75rem;
+  border-bottom: 3px solid #1A1A1A;
+  padding-bottom: 1px;
+}
+
+.tabElementBtn {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  border: 3px solid #1A1A1A;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  cursor: pointer;
+  transform: translateY(3px);
+  transition: all 0.1s ease;
+}
+
+.tabActive {
+  background-color: #FDFBF7 !important;
+  transform: translateY(0px);
+  padding-bottom: 1rem;
+}
+
+/* Subject Bento Layout Blocks */
+.decksLayoutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.subjectCardSlat {
+  background-color: #ffffff;
+  border: 3px solid #1A1A1A;
+  border-radius: 16px;
+  box-shadow: 5px 5px 0px #1A1A1A;
+  overflow: hidden;
+  transition: all 0.1s ease;
+}
+
+.subjectCardSlat:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #1A1A1A;
+}
+
+.cardInternalLayout {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Card Border Colors */
+.greenCard  { border-top: 12px solid #52B788; }
+.purpleCard { border-top: 12px solid #B5A7DF; }
+.yellowCard { border-top: 12px solid #F4D35E; }
+
+.deckBadge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: #ffffff;
+  border: 2px solid #1A1A1A;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.deckTitleText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem 0;
+  color: #1A1A1A;
+}
+
+.deckTopicsSummary {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.4;
+  margin: 0 0 2rem 0;
+  flex: 1;
+}
+
+.cardFooterMetrics {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.liveIndicator {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Play Actions Interface Tray Layout */
+.deckPlayButtonGroup {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.startSoloBtn {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 0.85rem;
+  background-color: #ffffff;
+  border: 2px solid #1A1A1A;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #1A1A1A;
+  transition: all 0.1s ease;
+}
+
+.startSoloBtn:hover {
+  background-color: #59C3E3;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #1A1A1A;
+}
+
+.startSoloBtn:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+.startDuelBtn {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 0.85rem;
+  background-color: #52B788;
+  border: 2px solid #1A1A1A;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #1A1A1A;
+  transition: all 0.1s ease;
+}
+
+.startDuelBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #1A1A1A;
+}
+
+.startDuelBtn:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+/* Leaderboard Board Rows Container */
+.leaderboardWrapperBlock {
+  background: #ffffff;
+  border: 3px solid #1A1A1A;
+  border-radius: 16px;
+  box-shadow: 5px 5px 0px #1A1A1A;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.leaderboardRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 2px solid #1A1A1A;
+  border-radius: 10px;
+  background-color: #FDFBF7;
+  font-weight: 700;
+}
+
+/* Responsive Grid Adapters */
+@media (max-width: 768px) {
+  .profileHeroCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .usernameDisplay {
+    font-size: 2.25rem;
+  }
+}

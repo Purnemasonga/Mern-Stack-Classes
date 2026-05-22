@@ -1,0 +1,167 @@
+/* src/pages/LoginPage.module.css */
+
+.authLayoutContainer {
+  max-width: 1100px;
+  margin: 6rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/* Left Promo Column */
+.promoSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.floatingTag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  background-color: var(--accent-purple);
+  padding: 0.4rem 0.8rem;
+  border: var(--neo-border);
+  border-radius: 8px;
+  box-shadow: var(--neo-shadow-sm);
+}
+
+.massiveTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4rem;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+.promoDescription {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Right Form Panel Card */
+.formPanelCard {
+  background: #ffffff;
+  border: var(--neo-border);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-shadow);
+  overflow: hidden;
+}
+
+.cardHeader {
+  background-color: var(--ink-black);
+  color: #ffffff;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.formTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.authForm {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fieldBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.brutalLabel {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.brutalInput {
+  width: 100%;
+  padding: 1rem;
+  border: var(--neo-border);
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  outline: none;
+  background-color: var(--bg-main);
+  box-sizing: border-box;
+}
+
+.brutalInput:focus {
+  background-color: #ffffff;
+  border-color: var(--accent-blue);
+}
+
+/* Role Selection Systems */
+.roleTabGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.roleTabBtn {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 0.85rem;
+  border: var(--neo-border);
+  border-radius: 12px;
+  background-color: var(--bg-main);
+  cursor: pointer;
+  box-shadow: var(--neo-shadow-sm);
+  transition: var(--transition-snap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.roleTabBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--ink-black);
+}
+
+.roleActiveGreen {
+  background-color: var(--accent-green) !important;
+  transform: translate(2px, 2px);
+  box-shadow: none !important;
+}
+
+.roleActivePurple {
+  background-color: var(--accent-purple) !important;
+  transform: translate(2px, 2px);
+  box-shadow: none !important;
+}
+
+/* Enter Matchmaking Submit Button */
+.enterArenaBtn {
+  margin-top: 1rem;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  background-color: var(--accent-green);
+  border: var(--neo-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  cursor: pointer;
+  box-shadow: var(--neo-shadow-sm);
+  transition: var(--transition-snap);
+  width: 100%;
+}
+
+.enterArenaBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}

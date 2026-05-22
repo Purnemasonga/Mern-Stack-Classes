@@ -1,0 +1,175 @@
+/* src/pages/Adminpage.module.css */
+
+.adminWrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: sans-serif;
+}
+
+.adminHeaderBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.adminMainTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1A1A1A !important;
+  margin: 0.5rem 0 0 0;
+}
+
+.adminBadge {
+  color: #FFB703;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.systemStatusPill {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+/* Metric Cards Grid Layout matching your original dashboard */
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.metricCard {
+  background: #15191E; /* Rich Dark Background Card Container */
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 4px solid #fff;
+}
+
+.metricCount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.metricLabel {
+  color: #8A99AD;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.purpleAccent { border-top-color: #7209B7; }
+.blueAccent { border-top-color: #4CC9F0; }
+.yellowAccent { border-top-color: #F72585; }
+.greenAccent { border-top-color: #4361EE; }
+
+/* Submenu Navigation Elements */
+.adminTabs {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 2px solid #E2E8F0;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  padding: 0.75rem 0;
+  font-weight: bold;
+  color: #718096;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tabActive {
+  color: #1A1A1A;
+  border-bottom: 3px solid #FFB703;
+}
+
+/* Operational Panel Content Chassis */
+.splitMainDashboardLayout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.5rem;
+}
+
+.controlPanelDeck {
+  background: #15191E;
+  border-radius: 8px;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.panelTitle {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.verticalActionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.slatActionBtn {
+  background: #1F262E;
+  border: 1px solid #2D3748;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.slatActionBtn:hover {
+  background: #2A3440;
+}
+
+.brutalActionBtn {
+  background: #4CC9F0;
+  color: #000000;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.statusBannerText {
+  margin-top: 1rem;
+  background: #243E36;
+  color: #7EFCB6;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.mockChartVisual {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 150px;
+  background: #1F262E;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.mockChartVisual div {
+  flex: 1;
+  background: #00F5D4;
+  border-radius: 4px 4px 0 0;
+}

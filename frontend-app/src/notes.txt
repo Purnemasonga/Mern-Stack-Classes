@@ -1,0 +1,54 @@
+CLASS BASED COMPONENTS:
+
+synatx:
+import {component} from "react"
+class ClassName extends Component{
+    render(){
+        return (
+            html code 
+        )
+    }
+}
+export default ClassName;
+
+
+FUNCTION BASED COMPONENT:
+synatx:
+
+1. Using Arrow Function-
+const ComponentName=()=>{
+    return(
+        html code here...
+    )
+}
+export default ComponentName;
+
+-------------------------------
+
+2. Using Function Key word:
+function ComponentName(){
+    return(
+        html code here...
+    )
+}
+export default ComponentName;
+
+---------------------------------
+
+3. Using Functional Expression:
+const ComponentName=function(){ // here setting up with anonmus functio will be taken 
+    return(
+        html code here...
+    )
+}
+export default CompnentName;
+
+STYLING:
+synatx: In-Line STYLING {Braces{Object}}
+
+<nav style={{backgroundcolor: ------, height:,}}
+<ol style={{
+    display:"flex",
+
+}}
+

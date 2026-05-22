@@ -1,0 +1,192 @@
+/* src/pages/LoginPage.module.css */
+
+.authLayoutContainer {
+  max-width: 1200px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background-color: #FDFBF7;
+}
+
+/* Left Promo Content Column */
+.promoSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.floatingTag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  background-color: #B5A7DF; /* Pastel Purple */
+  color: #1A1A1A;
+  padding: 0.5rem 1rem;
+  border: 3px solid #1A1A1A;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px #1A1A1A;
+}
+
+.massiveTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.promoDescription {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Right-Side Form Structural Card Container */
+.formPanelCard {
+  background: #ffffff;
+  border: 3px solid #1A1A1A;
+  border-radius: 16px;
+  box-shadow: 6px 6px 0px #1A1A1A;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cardHeader {
+  background-color: #1A1A1A;
+  color: #ffffff;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.formTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.authForm {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+}
+
+.fieldBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.brutalLabel {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1A1A1A;
+  letter-spacing: 0.5px;
+}
+
+.brutalInput {
+  width: 100%;
+  padding: 1rem;
+  border: 3px solid #1A1A1A;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  outline: none;
+  background-color: #FDFBF7;
+  box-sizing: border-box;
+}
+
+.brutalInput:focus {
+  background-color: #ffffff;
+  border-color: #59C3E3; /* Neo Blue Focus Accent */
+}
+
+/* Role Selector Button Options Layout */
+.roleTabGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.roleTabBtn {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 1rem;
+  border: 3px solid #1A1A1A;
+  border-radius: 12px;
+  background-color: #FDFBF7;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #1A1A1A;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.roleTabBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #1A1A1A;
+}
+
+.roleActiveGreen {
+  background-color: #52B788 !important; /* Neo Mint Green */
+  transform: translate(2px, 2px) !important;
+  box-shadow: none !important;
+}
+
+.roleActivePurple {
+  background-color: #B5A7DF !important; /* Neo Muted Purple */
+  transform: translate(2px, 2px) !important;
+  box-shadow: none !important;
+}
+
+/* Submit Action Button Block */
+.enterArenaBtn {
+  margin-top: 1rem;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.1rem;
+  background-color: #52B788;
+  border: 3px solid #1A1A1A;
+  border-radius: 12px;
+  padding: 1.25rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #1A1A1A;
+  transition: all 0.1s ease;
+  width: 100%;
+  color: #1A1A1A;
+}
+
+.enterArenaBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #1A1A1A;
+}
+
+.enterArenaBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Responsive Grid Adaptation Breakpoint */
+@media (max-width: 850px) {
+  .authLayoutContainer {
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+  .massiveTitle {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,64 @@
+/* src/components/ProgressBar.module.css */
+.trackerContainer {
+  background: #ffffff;
+  border: var(--neo-border);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.trackLane {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.laneMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playerLabel {
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: -0.3px;
+}
+
+.scoreBadge {
+  font-size: 0.85rem;
+  font-weight: 800;
+  background-color: #ffffff;
+  border: 2px solid var(--ink-black);
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+}
+
+/* Track Box Outer Border Pipeline */
+.trackRail {
+  width: 100%;
+  height: 20px;
+  background-color: var(--bg-main);
+  border: var(--neo-border);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Internal Progress Fills */
+.fillBar {
+  height: 100%;
+  border-right: 2px solid var(--ink-black);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.userFill {
+  background-color: var(--accent-blue);
+}
+
+.oppFill {
+  background-color: var(--accent-yellow);
+}
