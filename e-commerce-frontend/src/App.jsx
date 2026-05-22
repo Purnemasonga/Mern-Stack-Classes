@@ -36,9 +36,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <CartProvider>
-        <NavBar />
         <Routes>
           {/* Public Routes */}
+          
           <Route path="/" element={<LandingPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="login" element={<Login />} />
@@ -61,7 +61,7 @@ const App = () => {
           <Route path="*" element={<ErrorPage />} />
 
           <Route path="ViewUsers" element={<ViewUsers />} />
-          <Route path="view-products" element={<ViewProducts/>}/>
+          <Route path="view-products" element={<ViewProducts />} />
         </Routes>
       </CartProvider>
     </BrowserRouter>

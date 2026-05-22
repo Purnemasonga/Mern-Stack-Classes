@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import NavBar from '../components/NavBar';
 const ForgetPassword = () => {
 
     const [details, setDetails] = useState({
@@ -58,6 +59,8 @@ const ForgetPassword = () => {
 
 
     return (
+<>
+        <NavBar/>
         <div id='forget-form-container'>
             <form action="" onSubmit={handleForget}>
                 <div className="row mx-3">
@@ -88,6 +91,7 @@ const ForgetPassword = () => {
             </form>
             <ToastContainer />
         </div>
+        </>
     )
 }
 

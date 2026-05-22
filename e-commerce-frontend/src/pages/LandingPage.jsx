@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import CarouselContainer from "../components/CarouselContainer";
 import DumiProducts from "../components/DumiProducts";
 import FooterComponent from "../components/FooterComponent";
+import NavBar from "../components/NavBar";
 
 const LandingPage = () => {
   const handleGreeting = () => {
@@ -16,6 +17,7 @@ const LandingPage = () => {
 
   return (
     <div>
+      <NavBar/>
       <button id="greeting-btn" onClick={handleGreeting}> Click to Announce Greeting</button>
        <CarouselContainer />
       <h1>Products</h1>

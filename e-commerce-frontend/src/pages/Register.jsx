@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
+import NavBar from "../components/NavBar";
 
 function Register() {
   const [details, setDetails] = useState({
@@ -35,8 +36,10 @@ function Register() {
     }
   };
 
-  
-  return (
+
+  return (<>
+
+    <NavBar />
     <div id="form-container">
       <Form onSubmit={handleSubmit}>
         <Row className="mb-3">
@@ -160,6 +163,7 @@ function Register() {
       </Form>
       <ToastContainer />
     </div>
+  </>
   );
 }
 

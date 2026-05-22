@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import { ToastContainer,toast } from 'react-toastify';
+import NavBar from '../components/NavBar';
 const ViewProducts = () => {
 
     const [allProducts, setAllProducts] = useState([])
@@ -42,13 +43,14 @@ const ViewProducts = () => {
             
         } catch (error) {
             console.log(error);
-            toast.error("failed to add cart")
-
+            toast.error("Access Denied")
+         
         }
     }
 
     return (
         <div>
+            <NavBar/>
 
             <h1>Products</h1>
 

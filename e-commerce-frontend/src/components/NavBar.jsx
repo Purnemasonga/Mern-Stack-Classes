@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -6,9 +6,31 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import { CartContext } from "../service/CartProvider";
 import ViewUsers from './../pages/ViewUsers';
+import axios from "axios";
 
 function NavBar() {
-  const { items } = useContext(CartContext);
+  const [count, setCartCount] = useState([])
+  const fetchCartProducts = async () => {
+    try {
+      const userId = localStorage.getItem("id");
+      const token = localStorage.getItem("token");
+      const response = await axios.get(`http://localhost:5000/cart/get-cartproducts/${userId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      setCartCount(response.data.AllProducts)
+    } catch (error) {
+      console.log(error);
+
+    }
+  }
+
+  useEffect(() => {
+    fetchCartProducts()
+  }, [count])
+
 
   return (
     <div id="navbar-container" style={{ position: "sticky", top: "0px", zIndex: "3" }}>
@@ -16,7 +38,7 @@ function NavBar() {
         <Container>
           <Navbar.Brand>
             <Link id="brand-name" to="/">Think Mart</Link>
-            </Navbar.Brand>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -70,7 +92,7 @@ function NavBar() {
               </Link>
 
               <Link to="/cart" className="btn btn-outline-dark">
-                Cart <strong>{items.length || 0}</strong>
+                Cart <strong>{count.length}</strong>
               </Link>
             </div>
           </Navbar.Collapse>

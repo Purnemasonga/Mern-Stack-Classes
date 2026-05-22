@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import NavBar from "../components/NavBar";
 const ViewUsers = () => {
   const [users, setUsers] = React.useState([]);
   const [input, setInput] = React.useState("");
@@ -29,6 +30,7 @@ const ViewUsers = () => {
   };
   return (
     <div className="m-5 p-5">
+      <NavBar/>
       <h1 className="text-center">Users</h1>
       <div
         className="input-container row"
